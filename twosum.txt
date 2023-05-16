@@ -1,0 +1,16 @@
+class Solution:
+    def TwoSum(self,nums,value):
+        k=[]
+        Nums=nums.copy()
+        for i in nums:
+            x=value-i
+            if x in nums:
+                k.append(Nums.index(i))
+                k.append(Nums.index(x))
+                print(k)
+                nums.remove(x)
+                k.clear()
+obj=Solution()
+nums=[2,7,4,5,8,1,6,3]
+value=9
+obj.TwoSum(nums,value)
